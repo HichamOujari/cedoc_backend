@@ -30,7 +30,8 @@ const getEnsgSameStruct = require("./controllers/user/getEnsgSameStruct");
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
-
+const port = process.env.PORT;
+//const port = 3001;
 
 app.get("/",(req,res)=>{
     res.send("welcome to cedoc")
@@ -128,6 +129,6 @@ app.post("/auth/DeleteStruct",(request,response)=>{
 })
 
 
-app.listen(3001, ()=>{
+app.listen(port, ()=>{
     console.log('app running on port 3001');
 })

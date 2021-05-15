@@ -31,6 +31,10 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
+
+app.get("/",(req,res)=>{
+    res.send("welcome to cedoc")
+})
 app.post("/auth/login",(request,response)=>{
     GetUser(response,request);
 })
